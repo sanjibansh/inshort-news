@@ -66,10 +66,7 @@ public class NewsServiceImpl implements NewsService {
                 .filter(s -> !s.isEmpty())
                 .collect(Collectors.joining(" & "));  // -> "search & musk & news"
 
-
-        List<NewsItem> RES = newsRepository.searchNewsItemsByTitleAndDescription(query);
-        System.out.println("HIIIIIIIIIIIIIIII "+RES);
-        return RES;
+        return newsRepository.searchNewsItemsByTitleAndDescription(query);
     }
 
     @Override
