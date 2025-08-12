@@ -15,7 +15,7 @@ public class OpenAIService {
     @Value("${spring.ai.openai.api-key}")
     private String openAiApiKey;
 
-    private final String API_KEY = openAiApiKey;
+    private final String API_KEY = "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"; // openAiApiKey;
     private final OkHttpClient client = new OkHttpClient();
 
     public String getChatCompletion(String prompt) {

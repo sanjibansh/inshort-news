@@ -39,7 +39,7 @@ public class DataLoaderConfig {
         return args -> {
             try {
                 URI fileUri = getClass().getClassLoader()
-                        .getResource("news_data.json")
+                        .getResource("news_data_test.json")
                         .toURI();
 
                 File file = new File(fileUri);
@@ -55,7 +55,7 @@ public class DataLoaderConfig {
                 loaderService.seedUserEvents(loadedNews, 2000);
                 System.out.println("User events seeded.");
 
-                seedUserEvents(); // optional if you want 5 random extra
+                seedUserEvents();
             } catch (Exception e) {
                 System.err.println("Error loading JSON file:");
                 e.printStackTrace();
